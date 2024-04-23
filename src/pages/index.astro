@@ -1,10 +1,12 @@
 ---
 import VueComponent from '../components/VueComponent.vue'
-import { Image } from 'astro:assets'
+import { Image, getImage } from 'astro:assets'
 import space from '../assets/space.jpg'
 
+const image = await getImage({ src: space })
+const processedSpace = {...space, src: image.src}
 export const prerender = false
 ---
 
 <VueComponent client:load />
-<Image src={space} alt="space" />
+<Image src={processedSpace} alt="space" />
