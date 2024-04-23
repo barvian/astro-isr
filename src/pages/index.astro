@@ -1,5 +1,8 @@
 ---
 import VueComponent from '../components/VueComponent.vue'
+import { Image } from 'astro:assets'
+import headshot from '../assets/headshot.jpeg'
 ---
 
 <VueComponent client:load />
+<Image src={headshot} alt="headshot" />
