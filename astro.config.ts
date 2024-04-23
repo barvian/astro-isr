@@ -7,7 +7,10 @@ import vue from "@astrojs/vue";
 export default defineConfig({
   output: "hybrid",
   adapter: vercel({
-    isr: true
+    isr: true,
+    webAnalytics: {
+			enabled: true
+		}
   }),
   integrations: [
     vue({
