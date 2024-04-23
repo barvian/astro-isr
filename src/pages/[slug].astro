@@ -1,7 +1,11 @@
 ---
 import VueComponent from '../components/VueComponent.vue'
 
-export const prerender = true
+export const getStaticPaths = async () => [
+    {
+        params: { slug: 'page1' },
+    }
+]
 ---
 
 <VueComponent client:load />

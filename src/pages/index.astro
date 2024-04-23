@@ -1,8 +1,10 @@
 ---
 import VueComponent from '../components/VueComponent.vue'
 import { Image } from 'astro:assets'
-import headshot from '../assets/headshot.jpeg'
+import space from '../assets/space.jpg'
+
+export const prerender = false
 ---
 
 <VueComponent client:load />
-<Image src={headshot} alt="headshot" />
+<Image src={space} alt="space" />
